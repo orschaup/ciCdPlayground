@@ -13,7 +13,7 @@ describe('list', () => {
   it('shows content as paragraph if it is a string', () => {
     const {getByTestId} = render(List, {content: 'the line'})
     
-    const p = getByTestId('singleContentParagraph')
+    const p = undefined // getByTestId('singleContentParagraph')
     expect(p).toBeInTheDocument();
     expect(p).toHaveTextContent('the line');
   })
