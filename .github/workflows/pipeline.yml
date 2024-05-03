@@ -28,3 +28,8 @@ jobs:
       if: success() || failure() # always run even if the previous step fails
       with:
         report_paths: '**/reports/*.xml'
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: public # The folder the action should deploy.
